@@ -10,7 +10,7 @@ using namespace std;
 class Domain {
 public:
     Domain(const std::string& domain) : domain_(domain) {
-        domain_.insert(0, ".");
+        domain_.insert(0, domain_delimeter_);
         reverse(domain_.begin(), domain_.end());
     }
 
@@ -43,6 +43,7 @@ public:
     }
 
 private:
+    std::string domain_delimeter_ = ".";
     std::string domain_;
 };
 
