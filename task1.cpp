@@ -71,15 +71,16 @@ private:
     }
 
     std::unordered_map<int, int> userToPagesCount;
-    std::vector<int> pagesToUsers = std::vector<int>(1001, 0);
+    const int MAX_SIZE = 1001;
+    std::vector<int> pagesToUsers = std::vector<int>(MAX_SIZE, 0);
 };
 
 int main() {
-    int Q;
-    cin >> Q;
+    int query_count;
+    cin >> query_count;
     EBook book;
 
-    for (int i = 0; i < Q; ++i) {
+    for (int i = 0; i < query_count; ++i) {
         string query;
         cin >> query;
 
