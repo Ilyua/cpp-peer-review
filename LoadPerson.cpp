@@ -1,4 +1,4 @@
-vector<Person> LoadPersons(string_view db_name, int db_connection_timeout, bool db_allow_exceptions,
+vector<Person> loadPersons(string_view db_name, int db_connection_timeout, bool db_allow_exceptions,
                            DBLogLevel db_log_level, int min_age, int max_age, string_view name_filter) {
     DBHandler db = establishDatabaseConnection(db_name, db_connection_timeout, db_allow_exceptions, db_log_level);
     if (!db_allow_exceptions && !db.IsOK()) {
